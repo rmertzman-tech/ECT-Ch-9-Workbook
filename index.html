@@ -1,73 +1,94 @@
-<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Chapter 9 Workbook v1.0 — Condition Scan Workbook</title>
-  <style>
-    :root { --bg:#f5f7fb; --panel:#ffffff; --ink:#1f2430; --muted:#5a6472; --line:#d7dee8; --accent:#3f6b4d; --accent-dark:#274a32; --accent-soft:#edf8ef; --warn:#7a4f00; --warn-bg:#fff5df; --good-bg:#eef7ec; --shadow:0 12px 28px rgba(22,35,55,0.10); --radius:18px; }
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Chapter 9 Workbook v2.0 — How Culture Makes Us</title>
+<meta content="Accessible Chapter 9 workbook rebuilt on the finalized chapter text: the real PE nursing home and correctional facility research, the smoothness caution, BioBond generalized, Building Alongside, and the process trail." name="description"/>
+<style>
+    :root {
+      --bg:#f5f7fb; --panel:#ffffff; --ink:#1f2430; --muted:#5a6472; --line:#d7dee8;
+      --accent:#3f6b4d; --accent-dark:#274a32; --accent-soft:#edf8ef;
+      --danger:#9c2d23; --good-bg:#eef7ec; --shadow:0 12px 28px rgba(22,35,55,0.10); --radius:18px;
+    }
     * { box-sizing:border-box; }
     html { scroll-behavior:smooth; }
-    body { margin:0; font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; color:var(--ink); background:linear-gradient(180deg,#f5f7fb 0%,#e7edf5 100%); line-height:1.55; }
-    header { background:radial-gradient(circle at top left,#f9fffa,#e8f4ea 58%,#d0e2d5 100%); border-bottom-color:#bccbdd; border-bottom-style:solid; border-bottom-width:1px; padding:28px 18px; }
+    body { margin:0; font-family: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; color:var(--ink); background:linear-gradient(180deg,#f5f7fb 0%,#e7edf5 100%); line-height:1.55; }
+    header { background:radial-gradient(circle at top left,#f9fffa,#e8f4ea 58%,#d0e2d5 100%); border-bottom:1px solid #bccbdd; padding:28px 18px; }
     .wrap { max-width:1120px; margin:0 auto; }
-    .hero { display:grid; grid-template-columns:1.6fr .9fr; gap:20px; align-items:stretch; }
-    .hero-card,.side-card,section { background:rgba(255,255,255,.96); border-color:var(--line); border-style:solid; border-width:1px; border-radius:var(--radius); box-shadow:var(--shadow); }
+    .hero { display:grid; grid-template-columns:1.6fr 0.9fr; gap:20px; align-items:stretch; }
+    .hero-card, .side-card, section { background:rgba(255,255,255,0.96); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow); }
     .hero-card { padding:26px; } .side-card { padding:20px; }
     .eyebrow { text-transform:uppercase; letter-spacing:.08em; font-size:.78rem; font-weight:800; color:var(--accent-dark); }
-    h1 { margin:8px 0 10px; font-size:clamp(2rem,4vw,3.5rem); line-height:1.05; }
+    h1 { margin:8px 0 10px; font-size:clamp(2rem,4vw,3.3rem); line-height:1.05; }
     h2 { margin-top:0; color:var(--accent-dark); font-size:1.55rem; }
-    h3 { color:var(--accent-dark); margin-bottom:8px; } p { margin-top:0; }
+    h3 { color:var(--accent-dark); margin-bottom:8px; }
+    p { margin-top:0; }
     .tagline { font-size:1.15rem; color:#2e3542; max-width:820px; }
     .pill-row { display:flex; flex-wrap:wrap; gap:8px; margin-top:14px; }
-    .pill { display:inline-flex; align-items:center; gap:6px; border-color:#b9c9dc; border-style:solid; border-width:1px; border-radius:999px; padding:6px 10px; background:#f6fbff; font-size:.88rem; color:var(--accent-dark); font-weight:650; }
+    .pill { display:inline-flex; align-items:center; gap:6px; border:1px solid #b9c9dc; border-radius:999px; padding:6px 10px; background:#f6fbff; font-size:.88rem; color:var(--accent-dark); font-weight:650; }
     .grid { display:grid; grid-template-columns:260px 1fr; gap:18px; margin-top:18px; }
     nav { position:sticky; top:12px; align-self:start; }
-    .progress-box { background:var(--panel); border-color:var(--line); border-style:solid; border-width:1px; border-radius:var(--radius); box-shadow:var(--shadow); padding:16px; }
+    .progress-box { background:var(--panel); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow); padding:16px; }
     .bar { height:12px; background:#e1e7ef; border-radius:999px; overflow:hidden; margin:8px 0; }
-    .bar > div { height:100%; width:0%; background:var(--accent); transition-property:width; transition-duration:200ms; transition-timing-function:ease; }
-    .toc { list-style:none; padding:0; margin:10px 0 0; } .toc li { margin:6px 0; }
-    .toc a { color:var(--accent-dark); text-decoration:none; font-weight:700; font-size:.93rem; } .toc a:hover,.toc a:focus { text-decoration:underline; }
-    main { display:grid; gap:18px; } section { padding:22px; }
+    .bar > div { height:100%; width:0%; background:var(--accent); transition:width 200ms ease; }
+    .toc { list-style:none; padding:0; margin:10px 0 0; }
+    .toc li { margin:6px 0; }
+    .toc a { color:var(--accent-dark); text-decoration:none; font-weight:700; font-size:.93rem; }
+    .toc a:hover, .toc a:focus { text-decoration:underline; }
+    main { display:grid; gap:18px; }
+    section { padding:22px; }
     .section-kicker { color:var(--muted); font-weight:750; margin-bottom:6px; }
-    .callout { background:var(--accent-soft); border-left-color:var(--accent); border-left-style:solid; border-left-width:5px; padding:14px 16px; border-radius:12px; margin:14px 0; }
-    .warning { background:var(--warn-bg); border-left-color:var(--warn); border-left-style:solid; border-left-width:5px; padding:14px 16px; border-radius:12px; margin:14px 0; }
-    .success { background:var(--good-bg); border-left-color:#4d7e46; border-left-style:solid; border-left-width:5px; padding:14px 16px; border-radius:12px; margin:14px 0; }
-    .casebox { background:#f9fbfe; border-color:#cfddea; border-style:solid; border-width:1px; border-radius:14px; padding:16px; margin:12px 0; }
-    .two { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+    .callout, .warning, .success, .casebox, .stop-box { border-style:solid; border-width:1px; border-radius:14px; padding:16px; margin:14px 0; }
+    .callout { background:var(--accent-soft); border-left:5px solid var(--accent); border-color:var(--line); }
+    .warning { background:#fff5df; border-left:5px solid #7a4f00; border-color:#e9d6a6; }
+    .success { background:var(--good-bg); border-left:5px solid #4d7e46; border-color:#c9e0c4; }
+    .casebox { background:#f9fbfe; border-color:#cfddea; }
+    .stop-box { background:#fff0ee; border:2px solid var(--danger); }
+    .stop-box strong.stop-label { color:var(--danger); text-transform:uppercase; letter-spacing:.04em; font-size:.85rem; }
     label { display:block; font-weight:800; margin:14px 0 6px; color:#273142; }
     .hint { color:var(--muted); font-size:.92rem; margin-top:-3px; }
-    input[type="text"],select,textarea { width:100%; font:inherit; color:var(--ink); background:#fff; border-color:#bfcbd8; border-style:solid; border-width:1px; border-radius:12px; padding:11px 12px; }
-    textarea { min-height:104px; resize:vertical; } textarea.output { min-height:360px; font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono",monospace; white-space:pre; }
-    input:focus,select:focus,textarea:focus,button:focus { outline-color:#2c5d3c; outline-style:solid; outline-width:3px; outline-offset:2px; }
-    .required-mark { color:#9c2d23; font-weight:900; }
-    .checkline { display:flex; gap:10px; align-items:flex-start; margin-top:10px; }
-    .checkline label { margin:0; font-weight:650; }
-    button { appearance:none; border-width:0; border-radius:999px; background:var(--accent); color:#fff; font-weight:800; padding:11px 16px; cursor:pointer; }
-    button.secondary { background:#e9eef5; color:var(--accent-dark); border-color:#b8c6d6; border-style:solid; border-width:1px; }
-    button:hover { filter:brightness(.96); } .buttons { display:flex; flex-wrap:wrap; gap:10px; margin:14px 0; }
-    .alert { display:none; padding:12px 14px; border-radius:12px; margin:12px 0; font-weight:750; } .alert.show { display:block; } .alert.err { background:#ffe9e5; color:#7b1f15; } .alert.ok { background:#eaf7e8; color:#245722; }
-    table { width:100%; border-collapse:collapse; margin:12px 0; } th,td { border-color:#d7dee8; border-style:solid; border-width:1px; padding:10px; text-align:left; vertical-align:top; } th { background:#edf3fa; }
-    footer { padding:28px 18px 40px; color:var(--muted); text-align:center; }
-    @media (max-width:850px){ .hero,.grid,.two{grid-template-columns:1fr;} nav{position:relative; top:auto;} }
+    textarea, select { width:100%; font:inherit; color:var(--ink); background:#fff; border:1px solid #bfcbd8; border-radius:12px; padding:11px 12px; }
+    textarea { min-height:104px; resize:vertical; }
+    textarea:focus, select:focus, button:focus { outline:3px solid #2c5d3c; outline-offset:2px; }
+    textarea[aria-invalid="true"], select[aria-invalid="true"] { border-color:var(--danger); background:#fff5f4; }
+    .checkline { display:flex; gap:10px; align-items:flex-start; margin:12px 0; padding:12px; background:#f6fbff; border:1px solid #b9c9dc; border-radius:12px; }
+    .checkline input { margin-top:5px; }
+    .zero-credit { display:block; margin-top:4px; color:var(--muted); font-weight:500; font-size:.88rem; }
+    .buttons { display:flex; flex-wrap:wrap; gap:10px; margin-top:16px; }
+    button { border:1px solid var(--accent-dark); border-radius:999px; background:var(--accent); color:#fff; padding:10px 14px; font:inherit; font-weight:800; cursor:pointer; }
+    button.secondary { background:#fff; color:var(--accent-dark); }
+    button.danger { background:var(--danger); border-color:#7b1f15; }
+    button:hover { filter:brightness(0.97); }
+    .small { font-size:.9rem; color:var(--muted); }
+    .error-inline { display:none; margin-top:6px; color:var(--danger); font-weight:700; font-size:.92rem; }
+    .error-summary { display:none; background:#fff5f3; border:2px solid var(--danger); border-radius:14px; padding:14px 16px; margin:14px 0; }
+    .error-summary h3 { color:var(--danger); margin-bottom:6px; }
+    #outputText { min-height:340px; font-family: ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:.9rem; }
+    footer { padding:24px 18px 40px; color:var(--muted); text-align:center; }
+    table.mini { width:100%; border-collapse:collapse; margin:12px 0; font-size:.88rem; }
+    table.mini th, table.mini td { border:1px solid #d7dee8; padding:8px; text-align:left; vertical-align:top; }
+    table.mini th { background:#edf3fa; }
+    @media (max-width:860px) { .hero,.grid { grid-template-columns:1fr; } nav { position:static; } }
   </style>
 </head>
 <body>
 <header>
   <div class="wrap hero">
     <div class="hero-card">
-      <div class="eyebrow">Ethics and Critical Thinking · Chapter 9</div>
-      <h1>Chapter 9 Workbook v1.0 — Condition Scan Workbook</h1>
-      <p class="tagline">Use the Condition Scan to protect life-support conditions, uncover hidden costs, and propose repair.</p>
+      <div class="eyebrow">Chapter 9 Workbook · How Culture Makes Us · v2.0</div>
+      <h1>How Culture Makes Us</h1>
+      <p class="tagline">Two real institutions, one structural signature — the <strong>smoothness caution</strong>, <strong>BioBond generalized</strong>, and Building Alongside, with a genuine process trail.</p>
       <div class="pill-row">
-        <span class="pill">Case: Cheap Housing, Dirty Air</span><span class="pill">Visible price vs hidden cost</span><span class="pill">Portable classroom version</span>
+        <span class="pill">PE-Acquired Nursing Homes</span>
+        <span class="pill">Private Correctional Facilities</span>
+        <span class="pill">The Smoothness Caution</span>
       </div>
     </div>
     <aside class="side-card">
-      <h2>Chapter skill</h2>
-      <p><strong>Ethics skill:</strong> protect the conditions that make life and agency possible.</p>
-      <p><strong>Critical-thinking skill:</strong> distinguish visible price from hidden cost.</p>
-      <p><strong>Estimated time:</strong> 25–35 minutes.</p>
+      <h2>What this workbook does</h2>
+      <p><strong>Ethics skill:</strong> Distinguish an institution's stated purpose from what it actually rewards in practice.</p>
+      <p><strong>Output:</strong> A Chapter 9 Workbook Output Card.</p>
+      <p class="small">Estimated time: 30–40 minutes.</p>
     </aside>
   </div>
 </header>
@@ -76,215 +97,310 @@
     <div class="progress-box">
       <strong>Progress</strong>
       <div class="bar" aria-hidden="true"><div id="barFill"></div></div>
-      <div id="progressText">0% complete</div>
+      <div id="progressText" class="small">0 of 11 required responses completed.</div>
       <ol class="toc">
         <li><a href="#arrive">1. Arrive</a></li>
-        <li><a href="#case">2. Read the Case</a></li>
-        <li><a href="#conditions">3. Life-Support Conditions</a></li>
-        <li><a href="#costs">4. Visible Price / Hidden Cost</a></li>
-        <li><a href="#distribution">5. Benefits and Burdens</a></li>
-        <li><a href="#voice">6. Voice, Choice, Future Agency</a></li>
-        <li><a href="#limits">7. Responsibility and Limits</a></li>
-        <li><a href="#repair">8. Protection / Repair</a></li>
-        <li><a href="#output">9. Output Card</a></li>
+        <li><a href="#case">2. Two Real Institutions</a></li>
+        <li><a href="#smoothness">3. The Smoothness Caution</a></li>
+        <li><a href="#signature">4. The Same Signature, Twice</a></li>
+        <li><a href="#biobond">5. BioBond, Generalized</a></li>
+        <li><a href="#alongside">6. Building Alongside</a></li>
+        <li><a href="#before">7. Before You Reason It Through</a></li>
+        <li><a href="#apply">8. Apply the Smoothness Caution</a></li>
+        <li><a href="#after">9. After Working Through It</a></li>
+        <li><a href="#revision">10. The Revision Check</a></li>
+        <li><a href="#output">11. Output Card</a></li>
       </ol>
-      <div class="buttons"><button type="button" class="secondary" id="clearBtn">Clear saved work</button></div>
+      <div class="buttons">
+        <button type="button" class="secondary" id="downloadWorksheet">Download worksheet</button>
+        <button type="button" class="secondary" id="saveBtn">Save now</button>
+        <button type="button" class="danger" id="clearBtn">Clear my responses</button>
+      </div>
     </div>
   </nav>
   <main>
     <section id="arrive">
-      <div class="section-kicker">1. Arrive</div>
-      <h2>Environmental ethics protects the territory of agency.</h2>
-      <p>In Chapter 9, you learned that agency needs conditions: breathable air, clean water, stable shelter, health, land, climate, and ecosystems. This workbook helps you scan a decision for the condition at stake, the hidden cost, the distribution of burdens, and a possible repair route.</p>
-      <div class="warning"><strong>Privacy reminder:</strong> You may use the provided case, a fictional example, a public example, a historical example, a composite example, or a low-stakes personal example. Do not disclose private, identifying, or sensitive information.</div>
-      <div class="checkline"><input type="checkbox" id="privacyAck" data-required><label for="privacyAck">I understand that I can use a non-private example and that this workbook asks for ethical analysis, not confession. <span class="required-mark">*</span></label></div>
+      <div class="section-kicker">1 · Arrive</div>
+      <h2>You are not quite the same person in every room</h2>
+      <p>A place can say, out loud and often, that it values something — and be, underneath that language, organized to produce something else entirely. You inherited that gap the moment you walked in, the same way you inherited the room's temperature.</p>
+      <div class="warning"><strong>Privacy:</strong> Section 7 asks about a real institution you're part of. Use a real one if comfortable, or keep it general.</div>
+      <div class="checkline">
+        <input type="checkbox" id="privacyAck" data-required="true" aria-describedby="privacyAck_error">
+        <label for="privacyAck">I understand this workbook is for practicing the chapter's skills, not for disclosing private information.</label>
+      </div>
+      <p class="error-inline" id="privacyAck_error">Please check this box before continuing.</p>
     </section>
 
     <section id="case">
-      <div class="section-kicker">2. Read the Case</div>
-      <h2>Cheap Housing, Dirty Air</h2>
-      <div class="casebox"><p>A city approves a new affordable housing development near an industrial area. The project is praised because housing costs are rising and families need places they can afford. But the area already has poor air quality, truck routes, noise, and pollution. Some families report asthma and breathing problems. Residents and advocates ask whether the cheaper housing is shifting environmental and health costs onto the people with the fewest options.</p></div>
-      <label for="caseReaction">What stands out first in this case? <span class="required-mark">*</span></label>
-      <textarea id="caseReaction" data-required></textarea>
-      <label for="quickMapMiss">What might a shallow housing-versus-air map miss? <span class="required-mark">*</span></label>
-      <textarea id="quickMapMiss" data-required></textarea>
+      <div class="section-kicker">2 · Two Real Institutions</div>
+      <h2>Nursing homes and correctional facilities, sharing nothing but ownership</h2>
+      <div class="casebox">
+        <p><strong>Case One:</strong> Independent published research found facilities acquired by private equity firms provide 33 fewer minutes of direct daily care per resident than comparable non-profit facilities, and linked PE ownership to a measurable increase in short-term patient mortality.</p>
+        <p><strong>Case Two:</strong> A private, for-profit correctional facility shows staff turnover near 43 percent, a share of revenue allocated to actual rehabilitation programming under 1 percent, and a measurable increase in recidivism compared to publicly operated facilities.</p>
+      </div>
+      <label for="case_read">Prompt 2.1 — What's identical between them?</label>
+      <p class="hint">The population, mission, and regulatory system are all completely different. What's identical, and why does that consistency matter more than either case alone?</p>
+      <textarea id="case_read" data-required="true" aria-describedby="case_read_error"></textarea>
+      <p class="error-inline" id="case_read_error">This still needs a response.</p>
     </section>
 
-    <section id="conditions">
-      <div class="section-kicker">3. Life-Support Conditions</div>
-      <h2>Identify the condition.</h2>
-      <div class="callout"><strong>Life-support condition:</strong> something that makes life, health, participation, and agency possible.</div>
-      <label for="conditionAtStake">What life-support condition is at stake? <span class="required-mark">*</span></label>
-      <textarea id="conditionAtStake" data-required placeholder="Example: breathable air and safe housing."></textarea>
-      <label for="whoDepends">Who depends on this condition? <span class="required-mark">*</span></label>
-      <textarea id="whoDepends" data-required placeholder="Example: residents, children, elders, workers, people with asthma, future residents."></textarea>
-      <label for="ecosystemConcern">What part of the wider living world, ecosystem, or shared environment may also matter? <span class="required-mark">*</span></label>
-      <textarea id="ecosystemConcern" data-required></textarea>
+    <section id="smoothness">
+      <div class="section-kicker">3 · The Smoothness Caution</div>
+      <h2>"It's working fine" is not evidence</h2>
+      <div class="callout">An institution can run without visible friction — meeting its numbers, passing its audits, keeping its doors open — while the actual thing it was built to produce quietly stops happening at all. Absence of visible friction is not evidence of health.</div>
+      <label for="smoothness_why">Prompt 3.1 — Why does smoothness hide extraction?</label>
+      <p class="hint">Why are the people closest to the actual cost often the people with the least power to make anyone look?</p>
+      <textarea id="smoothness_why" data-required="true" aria-describedby="smoothness_why_error"></textarea>
+      <p class="error-inline" id="smoothness_why_error">This still needs a response.</p>
     </section>
 
-    <section id="costs">
-      <div class="section-kicker">4. Visible Price / Hidden Cost</div>
-      <h2>Ask what the official frame leaves out.</h2>
-      <div class="callout"><strong>Visible price:</strong> the cost that is easy to see. <br><strong>Hidden cost:</strong> the burden shifted outside the official frame.</div>
-      <label for="visiblePrice">What is the visible price or visible benefit? <span class="required-mark">*</span></label>
-      <textarea id="visiblePrice" data-required></textarea>
-      <label for="hiddenCost">What hidden cost may be carried by bodies, communities, ecosystems, or future people? <span class="required-mark">*</span></label>
-      <textarea id="hiddenCost" data-required></textarea>
-      <label for="costShift">Where has the cost been moved? <span class="required-mark">*</span></label>
-      <textarea id="costShift" data-required></textarea>
+    <section id="signature">
+      <div class="section-kicker">4 · The Same Signature, Twice</div>
+      <h2>A modeled comparison, drawn from real data</h2>
+      <table class="mini">
+        <tr><th></th><th>PE-Acquired Nursing Home</th><th>Private Correctional Facility</th></tr>
+        <tr><td>Modeled structural ceiling</td><td>13.6 of 100</td><td>10.9 of 100</td></tr>
+        <tr><td>Non-extractive alternative</td><td>55.1 (non-profit)</td><td>49.7 (public)</td></tr>
+      </table>
+      <label for="signature_reflect">Prompt 4.1 — What is the actual argument here?</label>
+      <p class="hint">Two structural-ceiling scores landing within three points of each other, in sectors that share nothing else. What does that consistency suggest is actually degrading care and rehabilitation?</p>
+      <textarea id="signature_reflect" data-required="true" aria-describedby="signature_reflect_error"></textarea>
+      <p class="error-inline" id="signature_reflect_error">This still needs a response.</p>
     </section>
 
-    <section id="distribution">
-      <div class="section-kicker">5. Benefits and Burdens</div>
-      <h2>Follow the distribution.</h2>
-      <label for="whoBenefits">Who benefits from the decision or arrangement? <span class="required-mark">*</span></label>
-      <textarea id="whoBenefits" data-required></textarea>
-      <label for="whoBurdened">Who carries the environmental, health, or agency burden? <span class="required-mark">*</span></label>
-      <textarea id="whoBurdened" data-required></textarea>
-      <label for="justiceFinding">Which best describes the distribution? <span class="required-mark">*</span></label>
-      <select id="justiceFinding" data-required>
-        <option value="">Choose one</option>
-        <option>Benefits and burdens look fairly shared</option>
-        <option>Benefits and burdens look unevenly distributed</option>
-        <option>The distribution is mixed or uncertain</option>
-        <option>More information is needed</option>
-      </select>
+    <section id="biobond">
+      <div class="section-kicker">5 · BioBond, Generalized</div>
+      <h2>Four scales, one definition</h2>
+      <div class="callout">A BioBond is any relational condition, at any scale, that sustains or enhances an agent's capacity for repair — a trusted friend (individual/relational), mutual trust grown through shared work (peer/community), a sustained external network like Oliver Tambo's (institutional/political), or a designed change in an institution's relationship to its own funders (financial/structural).</div>
+      <label for="biobond_hardest">Prompt 5.1 — Why is the financial/structural prototype the hardest to feel?</label>
+      <p class="hint">A friend is easy to recognize as sustaining you. Why does a restructured relationship between a nursing home chain and its banks operate by the identical logic, even though it feels like nothing at all?</p>
+      <textarea id="biobond_hardest" data-required="true" aria-describedby="biobond_hardest_error"></textarea>
+      <p class="error-inline" id="biobond_hardest_error">This still needs a response.</p>
     </section>
 
-    <section id="voice">
-      <div class="section-kicker">6. Voice, Choice, Future Agency</div>
-      <h2>Ask who can refuse and who inherits the condition.</h2>
-      <label for="voiceChoice">Did affected people have real voice, choice, or ability to refuse? Explain. <span class="required-mark">*</span></label>
-      <textarea id="voiceChoice" data-required></textarea>
-      <label for="futureAgency">How might this decision affect future agency or future repair options? <span class="required-mark">*</span></label>
-      <textarea id="futureAgency" data-required></textarea>
-      <label for="futurePeople">Who might inherit the effects later? <span class="required-mark">*</span></label>
-      <textarea id="futurePeople" data-required></textarea>
+    <section id="alongside">
+      <div class="section-kicker">6 · Building Alongside</div>
+      <h2>Unchained Industries</h2>
+      <p>Founded by someone who had himself been incarcerated, Unchained Industries operates as a networked structure in the correctional sector, following the identical strategy Maathai used: not reforming the extractive structure from within, but building a working alternative alongside it until its results become too documented to ignore.</p>
+      <label for="alongside_apply">Prompt 6.1 — What made this founder's position structurally different?</label>
+      <p class="hint">He wasn't an outside reformer proposing what incarcerated people probably need. Why does having actually lived inside the extractive structure matter for what he was able to build?</p>
+      <textarea id="alongside_apply" data-required="true" aria-describedby="alongside_apply_error"></textarea>
+      <p class="error-inline" id="alongside_apply_error">This still needs a response.</p>
     </section>
 
-    <section id="limits">
-      <div class="section-kicker">7. Responsibility and Limits</div>
-      <h2>Avoid false certainty and false tradeoffs.</h2>
-      <label for="responsibility">Where does responsibility still belong? <span class="required-mark">*</span></label>
-      <textarea id="responsibility" data-required></textarea>
-      <label for="cannotConclude">What still cannot be concluded from the information available? <span class="required-mark">*</span></label>
-      <textarea id="cannotConclude" data-required></textarea>
-      <label for="falseTradeoff">What false tradeoff should be avoided? <span class="required-mark">*</span></label>
-      <textarea id="falseTradeoff" data-required placeholder="Example: cheap housing with dirty air vs clean air with no housing."></textarea>
+    <section id="before">
+      <div class="section-kicker">7 · Before You Reason It Through</div>
+      <h2>What does your institution actually reward?</h2>
+      <div class="stop-box">
+        <p><strong class="stop-label">Stop — write before continuing</strong></p>
+        <p>Name one institution you belong to where you can feel a gap between what it says it values and what it actually rewards. Write your honest first sense of what tipped you off — something someone said, or something you noticed happening to someone else. Once you move on, don't come back and revise this.</p>
+      </div>
+      <label for="own_institution_first">Prompt 7.1 — Your institution and first reaction</label>
+      <textarea id="own_institution_first" data-required="true" aria-describedby="own_institution_first_error"></textarea>
+      <p class="error-inline" id="own_institution_first_error">This still needs a response.</p>
     </section>
 
-    <section id="repair">
-      <div class="section-kicker">8. Protection / Repair</div>
-      <h2>Protect the condition.</h2>
-      <label for="protectionStep">What protection, redesign, review, or repair step could protect the condition? <span class="required-mark">*</span></label>
-      <textarea id="protectionStep" data-required></textarea>
-      <label for="repairRoute">What repair route would bring the hidden cost back into the shared map? <span class="required-mark">*</span></label>
-      <textarea id="repairRoute" data-required></textarea>
-      <label for="smallImprovement">What would count as a small but real improvement? <span class="required-mark">*</span></label>
-      <textarea id="smallImprovement" data-required></textarea>
+    <section id="apply">
+      <div class="section-kicker">8 · Apply the Smoothness Caution</div>
+      <h2>Is the smoothness evidence of health, or just quiet?</h2>
+      <label for="apply_smoothness">Prompt 8.1 — Run the smoothness caution on your institution</label>
+      <p class="hint">Where is that institution currently smooth? Is the smoothness evidence that things are actually fine, or evidence that a real gap simply isn't reaching anyone with power to notice it?</p>
+      <textarea id="apply_smoothness" data-required="true" aria-describedby="apply_smoothness_error"></textarea>
+      <p class="error-inline" id="apply_smoothness_error">This still needs a response.</p>
+    </section>
+
+    <section id="after">
+      <div class="section-kicker">9 · After Working Through It</div>
+      <h2>Your final answer</h2>
+      <div class="stop-box">
+        <p><strong class="stop-label">Stop — write before continuing</strong></p>
+        <p>Having applied the smoothness caution honestly, has your sense of this institution changed?</p>
+      </div>
+      <label for="own_institution_final">Prompt 9.1 — Your final answer</label>
+      <textarea id="own_institution_final" data-required="true" aria-describedby="own_institution_final_error"></textarea>
+      <p class="error-inline" id="own_institution_final_error">This still needs a response.</p>
+    </section>
+
+    <section id="revision">
+      <div class="section-kicker">10 · The Revision Check</div>
+      <h2>What actually changed?</h2>
+      <label for="revision_check">Prompt 10.1 — Compare your first reaction to your final answer</label>
+      <p class="hint">Name one specific, concrete thing that changed. If nothing changed, say so honestly and explain why your first reaction already held up.</p>
+      <textarea id="revision_check" data-required="true" aria-describedby="revision_check_error"></textarea>
+      <p class="error-inline" id="revision_check_error">This still needs a response.</p>
+      <div class="checkline">
+        <input type="checkbox" id="journalRef">
+        <div><label for="journalRef">Optional: I explored this further in my Personal Ethics Journal.</label>
+        <span class="zero-credit">No description needed. This box is never worth points, in either direction.</span></div>
+      </div>
     </section>
 
     <section id="output">
-      <div class="section-kicker">9. Output Card</div>
-      <h2>Generate your Chapter 9 Workbook Output Card.</h2>
-      <p>Your instructor may ask you to paste this card into Canvas or download it as a file.</p>
-      <div id="alert" class="alert" role="status"></div>
+      <div class="section-kicker">11 · Output Card</div>
+      <h2>Chapter 9 Workbook Output Card</h2>
+      <div class="error-summary" id="errorSummary" tabindex="-1">
+        <h3>Please complete these items before creating the Output Card</h3>
+        <ul id="errorList"></ul>
+      </div>
       <div class="buttons">
         <button type="button" id="generateBtn">Generate Output Card</button>
         <button type="button" class="secondary" id="copyBtn">Copy Output Card</button>
-        <button type="button" class="secondary" id="downloadTxtBtn">Download Output Card</button>
-        <button type="button" class="secondary" id="downloadWorksheetBtn">Download Blank Worksheet</button>
+        <button type="button" class="secondary" id="downloadBtn">Download Output Card</button>
       </div>
-      <label for="outputCard">Chapter 9 Workbook Output Card</label>
-      <textarea id="outputCard" class="output" readonly></textarea>
-      <div class="success"><strong>Complete:</strong> You practiced identifying a life-support condition, distinguishing visible price from hidden cost, following burdens, checking future agency, and proposing protection or repair.</div>
-      <h3>Suggested 10-point rubric</h3>
-      <table><thead><tr><th>Criterion</th><th>Points</th></tr></thead><tbody>
-        <tr><td>Identifies the life-support condition and dependency</td><td>2</td></tr>
-        <tr><td>Distinguishes visible price from hidden cost</td><td>2</td></tr>
-        <tr><td>Explains benefits, burdens, voice, and choice</td><td>2</td></tr>
-        <tr><td>Connects the case to future agency and limits</td><td>2</td></tr>
-        <tr><td>Proposes a realistic protection or repair route</td><td>2</td></tr>
-      </tbody></table>
+      <label for="outputText">Output Card</label>
+      <textarea id="outputText" readonly></textarea>
+      <div id="completeMsg" class="success" hidden>You've completed the Chapter 9 workbook — two real institutions in full, BioBond generalized across four scales, and an honest process trail through your own institution.</div>
     </section>
   </main>
 </div>
-<footer><div class="wrap">Chapter 9 Workbook v1.0 · Local-only classroom version · Ethics and Critical Thinking</div></footer>
+<footer>Chapter 9 Workbook v2.0 · Ethics and Critical Thinking · Local-only HTML, no data leaves this page.</footer>
 <script>
-(function(){
+(function() {
   'use strict';
-  const storageKey = 'ebb_ch9_condition_scan_workbook_v1';
-  const required = Array.from(document.querySelectorAll('[data-required]'));
-  const fields = Array.from(document.querySelectorAll('textarea, input[type="text"], select, input[type="checkbox"]'));
+  const STORAGE_KEY = 'ch9_workbook_v2_how_culture_makes_us';
+  const requiredFields = Array.from(document.querySelectorAll('[data-required="true"]'));
+  const allFields = Array.from(document.querySelectorAll('textarea, select, input[type="checkbox"]'));
   const barFill = document.getElementById('barFill');
   const progressText = document.getElementById('progressText');
-  const alertBox = document.getElementById('alert');
-  const outputCard = document.getElementById('outputCard');
-  const labels = {
-    caseReaction:'First noticing', quickMapMiss:'What a shallow map might miss', conditionAtStake:'Life-support condition at stake', whoDepends:'Who depends on the condition', ecosystemConcern:'Wider living-world or ecosystem concern', visiblePrice:'Visible price or visible benefit', hiddenCost:'Hidden cost', costShift:'Where the cost has been moved', whoBenefits:'Who benefits', whoBurdened:'Who is burdened', justiceFinding:'Distribution finding', voiceChoice:'Voice, choice, or ability to refuse', futureAgency:'Effect on future agency or repair options', futurePeople:'Who may inherit effects later', responsibility:'Where responsibility still belongs', cannotConclude:'What still cannot be concluded', falseTradeoff:'False tradeoff to avoid', protectionStep:'Protection or repair step', repairRoute:'Repair route for hidden cost', smallImprovement:'Small improvement'
-  };
-  function valueOf(el){ return el.type === 'checkbox' ? (el.checked ? 'Yes' : '') : (el.value || '').trim(); }
-  function updateProgress(){
-    const done = required.filter(el => valueOf(el)).length;
-    const pct = Math.round((done / required.length) * 100);
-    barFill.style.width = pct + '%';
-    progressText.textContent = pct + '% complete (' + done + ' of ' + required.length + ' required responses)';
-    save();
-  }
-  function save(){
+  const outputText = document.getElementById('outputText');
+  const completeMsg = document.getElementById('completeMsg');
+  const errorSummary = document.getElementById('errorSummary');
+  const errorList = document.getElementById('errorList');
+  const journalRef = document.getElementById('journalRef');
+
+  function isFilled(el) { if (el.type === 'checkbox') return el.checked; return (el.value || '').trim().length > 0; }
+  function valueOf(id) { const el = document.getElementById(id); if (!el) return ''; return el.type === 'checkbox' ? (el.checked ? 'Yes' : 'No') : (el.value || '').trim(); }
+  function labelFor(id) { const l = document.querySelector('label[for="'+id+'"]'); return l ? l.textContent.replace(/\s+/g,' ').trim() : id; }
+
+  function collect() {
     const data = {};
-    fields.forEach(el => { data[el.id] = el.type === 'checkbox' ? el.checked : el.value; });
-    localStorage.setItem(storageKey, JSON.stringify(data));
+    allFields.forEach(el => { data[el.id] = el.type === 'checkbox' ? el.checked : el.value; });
+    data.savedAt = new Date().toISOString();
+    return data;
   }
-  function load(){
-    try{
-      const data = JSON.parse(localStorage.getItem(storageKey) || '{}');
-      fields.forEach(el => { if(Object.prototype.hasOwnProperty.call(data, el.id)){ if(el.type === 'checkbox') el.checked = !!data[el.id]; else el.value = data[el.id]; }});
-    } catch(e) {}
-    updateProgress();
+  function saveDraft() { try { localStorage.setItem(STORAGE_KEY, JSON.stringify(collect())); } catch(e) { console.warn('Could not save draft', e); } }
+  function loadDraft() {
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if (!raw) return;
+      const data = JSON.parse(raw);
+      allFields.forEach(el => {
+        if (!(el.id in data)) return;
+        if (el.type === 'checkbox') el.checked = Boolean(data[el.id]);
+        else el.value = data[el.id];
+      });
+    } catch(e) { console.warn('Could not load draft', e); }
   }
-  function show(message, ok){
-    alertBox.textContent = message;
-    alertBox.className = 'alert show ' + (ok ? 'ok' : 'err');
+  function updateProgress() {
+    const done = requiredFields.filter(isFilled).length;
+    const total = requiredFields.length;
+    const pct = total ? Math.round((done/total)*100) : 0;
+    barFill.style.width = pct + '%';
+    progressText.textContent = done + ' of ' + total + ' required responses completed.';
+    return { done, total };
   }
-  function missingFields(){ return required.filter(el => !valueOf(el)); }
-  function buildOutput(){
-    const missing = missingFields();
-    if(missing.length){ show('Please complete all required fields before generating the Output Card. Missing: ' + missing.length, false); missing[0].focus(); return ''; }
-    const lines = [];
-    lines.push('Chapter 9 Workbook Output Card — Condition Scan');
-    lines.push('Case: Cheap Housing, Dirty Air');
-    lines.push('');
-    Object.keys(labels).forEach(id => {
-      const el = document.getElementById(id);
-      lines.push(labels[id] + ':');
-      lines.push(valueOf(el) || '[No response]');
-      lines.push('');
-    });
-    lines.push('Completion statement: I practiced protecting life-support conditions by identifying hidden costs, burdens, voice, future agency, and repair.');
-    return lines.join('\n');
+  function clearErrors() {
+    errorList.innerHTML = ''; errorSummary.style.display = 'none';
+    requiredFields.forEach(el => { el.setAttribute('aria-invalid','false'); const e=document.getElementById(el.id+'_error'); if(e) e.style.display='none'; });
   }
-  function download(name, text){
+  function validate() {
+    clearErrors();
+    const missing = requiredFields.filter(el => !isFilled(el));
+    if (missing.length) {
+      missing.forEach(el => {
+        el.setAttribute('aria-invalid','true');
+        const e = document.getElementById(el.id+'_error'); if(e) e.style.display='block';
+        const li = document.createElement('li'); const a = document.createElement('a');
+        a.href = '#' + el.id; a.textContent = labelFor(el.id); li.appendChild(a); errorList.appendChild(li);
+      });
+      errorSummary.style.display = 'block'; errorSummary.focus();
+      return false;
+    }
+    return true;
+  }
+  function line(label, value) { return label + '\n' + (value || '[not completed]') + '\n'; }
+  function buildOutput() {
+    return [
+      'Chapter 9 Workbook Output Card — How Culture Makes Us',
+      '',
+      line('Two real institutions — what is identical between them:', valueOf('case_read')),
+      line('The Smoothness Caution — why smoothness hides extraction:', valueOf('smoothness_why')),
+      line('The Same Signature, Twice — reflection:', valueOf('signature_reflect')),
+      line('BioBond, Generalized — the hardest prototype to feel:', valueOf('biobond_hardest')),
+      line('Building Alongside — why the founder\'s position mattered:', valueOf('alongside_apply')),
+      '',
+      line('Before you reason it through — your institution and first reaction:', valueOf('own_institution_first')),
+      line('Applying the Smoothness Caution to your own institution:', valueOf('apply_smoothness')),
+      line('After working through it — your final answer:', valueOf('own_institution_final')),
+      line('The Revision Check — what actually changed:', valueOf('revision_check')),
+      '',
+      'Optional Journal reference: ' + (journalRef.checked ? 'Yes' : 'No')
+    ].join('\n');
+  }
+  function download(filename, text) {
     const blob = new Blob([text], {type:'text/plain;charset=utf-8'});
     const url = URL.createObjectURL(blob);
-    const a = document.createElement('a'); a.href = url; a.download = name; document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
+    const a = document.createElement('a'); a.href = url; a.download = filename;
+    document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
   }
-  function blankWorksheet(){
-    const lines = [];
-    lines.push('Chapter 9 Workbook v1.0 — Condition Scan Workbook');
-    lines.push('Case: Cheap Housing, Dirty Air');
-    lines.push('');
-    Object.values(labels).forEach(label => { lines.push(label + ':'); lines.push(''); lines.push(''); });
-    return lines.join('\n');
+  function worksheetText() {
+    return [
+      'Chapter 9 Workbook Worksheet v2.0 — How Culture Makes Us',
+      '',
+      'Case One: PE-acquired nursing homes provide 33 fewer minutes of daily care and show a measurable mortality increase.',
+      'Case Two: A private correctional facility shows 43 percent staff turnover and under 1 percent of revenue to programming.',
+      '',
+      '1. What is identical between these two institutions, and why does that consistency matter?',
+      '',
+      '2. The Smoothness Caution — why do the people closest to the cost have the least power to make anyone look?',
+      '',
+      '3. The Same Signature, Twice — what does the consistency across sectors suggest is actually degrading care and rehabilitation?',
+      '',
+      '4. BioBond, Generalized — why is the financial/structural prototype the hardest to feel, even though it works by the identical logic?',
+      '',
+      '5. Building Alongside — why did having lived inside the extractive structure matter for what Unchained Industries\' founder built?',
+      '',
+      '6. STOP — before continuing: name an institution you belong to with a gap between stated values and actual rewards, and your honest first sense of it. Do not revise this after moving on.',
+      '',
+      '7. Apply the Smoothness Caution to it — is the smoothness evidence of health, or evidence a gap isn\'t reaching anyone?',
+      '',
+      '8. STOP — after working through it: your final answer.',
+      '',
+      '9. Revision Check — what specifically changed? If nothing changed, say so honestly.',
+      '',
+      'Optional: note here if you explored this further in your Personal Ethics Journal (not graded).'
+    ].join('\n');
   }
-  fields.forEach(el => { el.addEventListener('input', updateProgress); el.addEventListener('change', updateProgress); });
-  document.getElementById('generateBtn').addEventListener('click', () => { const text = buildOutput(); if(text){ outputCard.value = text; show('Output Card generated.', true); save(); }});
-  document.getElementById('copyBtn').addEventListener('click', async () => { const text = outputCard.value || buildOutput(); if(!text) return; outputCard.value = text; try{ await navigator.clipboard.writeText(text); show('Output Card copied.', true); } catch(e){ outputCard.select(); document.execCommand('copy'); show('Output Card selected/copied if your browser allows it.', true); }});
-  document.getElementById('downloadTxtBtn').addEventListener('click', () => { const text = outputCard.value || buildOutput(); if(text) download('chapter9_condition_scan_output_card.txt', text); });
-  document.getElementById('downloadWorksheetBtn').addEventListener('click', () => download('chapter9_condition_scan_blank_worksheet.txt', blankWorksheet()));
-  document.getElementById('clearBtn').addEventListener('click', () => { if(confirm('Clear saved Chapter 9 workbook responses on this device?')){ localStorage.removeItem(storageKey); fields.forEach(el => { if(el.type === 'checkbox') el.checked = false; else el.value = ''; }); outputCard.value = ''; show('Saved work cleared on this device.', true); updateProgress(); }});
-  load();
-})();
+  document.addEventListener('input', e => { if (allFields.includes(e.target)) { updateProgress(); saveDraft(); } });
+  document.addEventListener('change', e => { if (allFields.includes(e.target)) { updateProgress(); saveDraft(); } });
+  document.getElementById('saveBtn').addEventListener('click', () => { saveDraft(); alert('Draft saved in this browser.'); });
+  document.getElementById('clearBtn').addEventListener('click', () => {
+    if (!confirm('Clear this saved Chapter 9 draft from this browser?')) return;
+    localStorage.removeItem(STORAGE_KEY);
+    allFields.forEach(el => { if (el.type === 'checkbox') el.checked = false; else el.value = ''; });
+    outputText.value = ''; completeMsg.hidden = true; clearErrors(); updateProgress();
+  });
+  document.getElementById('generateBtn').addEventListener('click', () => {
+    if (!validate()) return;
+    outputText.value = buildOutput();
+    completeMsg.hidden = false;
+    saveDraft();
+  });
+  document.getElementById('copyBtn').addEventListener('click', async () => {
+    if (!outputText.value.trim()) outputText.value = buildOutput();
+    try { await navigator.clipboard.writeText(outputText.value); alert('Output Card copied.'); }
+    catch(e) { outputText.select(); document.execCommand('copy'); alert('Output Card selected/copied.'); }
+  });
+  document.getElementById('downloadBtn').addEventListener('click', () => {
+    if (!outputText.value.trim()) outputText.value = buildOutput();
+    download('chapter_9_output_card.txt', outputText.value);
+  });
+  document.getElementById('downloadWorksheet').addEventListener('click', () => {
+    download('chapter_9_workbook_worksheet.txt', worksheetText());
+  });
+  loadDraft();
+  updateProgress();
+}());
 </script>
 </body>
 </html>
