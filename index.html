@@ -2,7 +2,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Chapter 9 Workbook v2.0 — How Culture Makes Us</title>
+<title>Chapter 9 Workbook v2.1 — How Culture Makes Us</title>
 <meta content="Accessible Chapter 9 workbook rebuilt on the finalized chapter text: the real PE nursing home and correctional facility research, the smoothness caution, BioBond generalized, Building Alongside, and the process trail." name="description"/>
 <style>
     :root {
@@ -47,6 +47,8 @@
     .stop-box strong.stop-label { color:var(--danger); text-transform:uppercase; letter-spacing:.04em; font-size:.85rem; }
     label { display:block; font-weight:800; margin:14px 0 6px; color:#273142; }
     .hint { color:var(--muted); font-size:.92rem; margin-top:-3px; }
+    .response-hint { margin:8px 0 0; padding:10px 12px; background:#eaf5ec; border:1px solid #c3ddc9; border-left:4px solid var(--accent-dark); border-radius:10px; font-size:.9rem; color:#25402c; }
+    .response-hint strong { color:var(--accent-dark); }
     textarea, select { width:100%; font:inherit; color:var(--ink); background:#fff; border:1px solid #bfcbd8; border-radius:12px; padding:11px 12px; }
     textarea { min-height:104px; resize:vertical; }
     textarea:focus, select:focus, button:focus { outline:3px solid #2c5d3c; outline-offset:2px; }
@@ -75,7 +77,7 @@
 <header>
   <div class="wrap hero">
     <div class="hero-card">
-      <div class="eyebrow">Chapter 9 Workbook · How Culture Makes Us · v2.0</div>
+      <div class="eyebrow">Chapter 9 Workbook · How Culture Makes Us · v2.1</div>
       <h1>How Culture Makes Us</h1>
       <p class="tagline">Two real institutions, one structural signature — the <strong>smoothness caution</strong>, <strong>BioBond generalized</strong>, and Building Alongside, with a genuine process trail.</p>
       <div class="pill-row">
@@ -97,7 +99,7 @@
     <div class="progress-box">
       <strong>Progress</strong>
       <div class="bar" aria-hidden="true"><div id="barFill"></div></div>
-      <div id="progressText" class="small">0 of 11 required responses completed.</div>
+      <div id="progressText" class="small">0 of 10 required responses completed.</div>
       <ol class="toc">
         <li><a href="#arrive">1. Arrive</a></li>
         <li><a href="#case">2. Two Real Institutions</a></li>
@@ -129,6 +131,12 @@
         <label for="privacyAck">I understand this workbook is for practicing the chapter's skills, not for disclosing private information.</label>
       </div>
       <p class="error-inline" id="privacyAck_error">Please check this box before continuing.</p>
+      <div class="callout" aria-labelledby="guidance-heading">
+        <h3 id="guidance-heading">Before You Start Typing</h3>
+        <p>The boxes in this workbook are graded responses, not a warm-up. A thin answer restates the obvious. A full answer names something specific and traceable, not a general truth that could apply to almost anything.</p>
+        <p>For example: asked why an app kept crashing, a thin answer says "it had bugs." A full answer says "a recent update introduced a memory leak in the image-caching code that only surfaced after about twenty minutes of continuous use." Both are about the same length. Only one of them could actually be checked against what happened.</p>
+        <p>Each prompt below has a short note under it naming the specific shortcut a rushed answer tends to take on that exact question. Read it before you write, not after you get your grade back.</p>
+      </div>
     </section>
 
     <section id="case">
@@ -140,7 +148,8 @@
       </div>
       <label for="case_read">Prompt 2.1 — What's identical between them?</label>
       <p class="hint">The population, mission, and regulatory system are all completely different. What's identical, and why does that consistency matter more than either case alone?</p>
-      <textarea id="case_read" data-required="true" aria-describedby="case_read_error"></textarea>
+      <p class="response-hint" id="case_read_rhint"><strong>Watch for:</strong> saying "they're both bad" or "they both cut corners" — that's a shared verdict, not the shared structure the question is asking about. A full answer names the specific thing that's identical despite the population, mission, and regulation being completely different, and says why finding that same thing twice, in unrelated sectors, is stronger evidence than either case alone.</p>
+      <textarea id="case_read" data-required="true" aria-describedby="case_read_error case_read_rhint"></textarea>
       <p class="error-inline" id="case_read_error">This still needs a response.</p>
     </section>
 
@@ -150,7 +159,8 @@
       <div class="callout">An institution can run without visible friction — meeting its numbers, passing its audits, keeping its doors open — while the actual thing it was built to produce quietly stops happening at all. Absence of visible friction is not evidence of health.</div>
       <label for="smoothness_why">Prompt 3.1 — Why does smoothness hide extraction?</label>
       <p class="hint">Why are the people closest to the actual cost often the people with the least power to make anyone look?</p>
-      <textarea id="smoothness_why" data-required="true" aria-describedby="smoothness_why_error"></textarea>
+      <p class="response-hint" id="smoothness_why_rhint"><strong>Watch for:</strong> answering "because they don't have power" — that restates the question instead of explaining the mechanism. A full answer explains why the two things are linked: why proximity to the actual cost and lack of power to expose it tend to travel together in these structures, rather than being an unlucky coincidence.</p>
+      <textarea id="smoothness_why" data-required="true" aria-describedby="smoothness_why_error smoothness_why_rhint"></textarea>
       <p class="error-inline" id="smoothness_why_error">This still needs a response.</p>
     </section>
 
@@ -164,7 +174,8 @@
       </table>
       <label for="signature_reflect">Prompt 4.1 — What is the actual argument here?</label>
       <p class="hint">Two structural-ceiling scores landing within three points of each other, in sectors that share nothing else. What does that consistency suggest is actually degrading care and rehabilitation?</p>
-      <textarea id="signature_reflect" data-required="true" aria-describedby="signature_reflect_error"></textarea>
+      <p class="response-hint" id="signature_reflect_rhint"><strong>Watch for:</strong> answering with a single word like "ownership" or "money" without explaining why two close scores, in sectors with nothing else in common, point specifically to that cause rather than something else. A full answer explains what the near-identical numbers rule out, not just what they suggest.</p>
+      <textarea id="signature_reflect" data-required="true" aria-describedby="signature_reflect_error signature_reflect_rhint"></textarea>
       <p class="error-inline" id="signature_reflect_error">This still needs a response.</p>
     </section>
 
@@ -174,7 +185,8 @@
       <div class="callout">A BioBond is any relational condition, at any scale, that sustains or enhances an agent's capacity for repair — a trusted friend (individual/relational), mutual trust grown through shared work (peer/community), a sustained external network like Oliver Tambo's (institutional/political), or a designed change in an institution's relationship to its own funders (financial/structural).</div>
       <label for="biobond_hardest">Prompt 5.1 — Why is the financial/structural prototype the hardest to feel?</label>
       <p class="hint">A friend is easy to recognize as sustaining you. Why does a restructured relationship between a nursing home chain and its banks operate by the identical logic, even though it feels like nothing at all?</p>
-      <textarea id="biobond_hardest" data-required="true" aria-describedby="biobond_hardest_error"></textarea>
+      <p class="response-hint" id="biobond_hardest_rhint"><strong>Watch for:</strong> an answer that treats the financial version as simply different from a friendship, rather than explaining why the definition's own logic — sustaining or enhancing capacity for repair — still applies to it. A full answer names specifically what capacity the changed bank relationship sustains, the same way a friend sustains a person's capacity.</p>
+      <textarea id="biobond_hardest" data-required="true" aria-describedby="biobond_hardest_error biobond_hardest_rhint"></textarea>
       <p class="error-inline" id="biobond_hardest_error">This still needs a response.</p>
     </section>
 
@@ -184,7 +196,8 @@
       <p>Founded by someone who had himself been incarcerated, Unchained Industries operates as a networked structure in the correctional sector, following the identical strategy Maathai used: not reforming the extractive structure from within, but building a working alternative alongside it until its results become too documented to ignore.</p>
       <label for="alongside_apply">Prompt 6.1 — What made this founder's position structurally different?</label>
       <p class="hint">He wasn't an outside reformer proposing what incarcerated people probably need. Why does having actually lived inside the extractive structure matter for what he was able to build?</p>
-      <textarea id="alongside_apply" data-required="true" aria-describedby="alongside_apply_error"></textarea>
+      <p class="response-hint" id="alongside_apply_rhint"><strong>Watch for:</strong> saying he "understands what they need" — that's true, but it doesn't say what specifically an outside reformer's guess would get wrong that his lived experience wouldn't. A full answer names a concrete kind of knowledge or credibility that only lived experience inside the structure could have produced.</p>
+      <textarea id="alongside_apply" data-required="true" aria-describedby="alongside_apply_error alongside_apply_rhint"></textarea>
       <p class="error-inline" id="alongside_apply_error">This still needs a response.</p>
     </section>
 
@@ -196,7 +209,8 @@
         <p>Name one institution you belong to where you can feel a gap between what it says it values and what it actually rewards. Write your honest first sense of what tipped you off — something someone said, or something you noticed happening to someone else. Once you move on, don't come back and revise this.</p>
       </div>
       <label for="own_institution_first">Prompt 7.1 — Your institution and first reaction</label>
-      <textarea id="own_institution_first" data-required="true" aria-describedby="own_institution_first_error"></textarea>
+      <p class="response-hint" id="own_institution_first_rhint"><strong>Watch for:</strong> naming an institution without the specific moment that tipped you off — the prompt asks for that concrete trigger, not just a general feeling that something's off. And if you've already built a case for or against the institution, that's not a first reaction anymore.</p>
+      <textarea id="own_institution_first" data-required="true" aria-describedby="own_institution_first_error own_institution_first_rhint"></textarea>
       <p class="error-inline" id="own_institution_first_error">This still needs a response.</p>
     </section>
 
@@ -205,7 +219,8 @@
       <h2>Is the smoothness evidence of health, or just quiet?</h2>
       <label for="apply_smoothness">Prompt 8.1 — Run the smoothness caution on your institution</label>
       <p class="hint">Where is that institution currently smooth? Is the smoothness evidence that things are actually fine, or evidence that a real gap simply isn't reaching anyone with power to notice it?</p>
-      <textarea id="apply_smoothness" data-required="true" aria-describedby="apply_smoothness_error"></textarea>
+      <p class="response-hint" id="apply_smoothness_rhint"><strong>Watch for:</strong> jumping straight to a verdict — "it's actually fine" or "it's not fine" — without first naming where the institution is currently smooth. A full answer names the specific smooth-looking area, then says what that smoothness could be hiding or genuinely confirming.</p>
+      <textarea id="apply_smoothness" data-required="true" aria-describedby="apply_smoothness_error apply_smoothness_rhint"></textarea>
       <p class="error-inline" id="apply_smoothness_error">This still needs a response.</p>
     </section>
 
@@ -217,7 +232,8 @@
         <p>Having applied the smoothness caution honestly, has your sense of this institution changed?</p>
       </div>
       <label for="own_institution_final">Prompt 9.1 — Your final answer</label>
-      <textarea id="own_institution_final" data-required="true" aria-describedby="own_institution_final_error"></textarea>
+      <p class="response-hint" id="own_institution_final_rhint"><strong>Watch for:</strong> restating your Section 7 reaction with more confidence — that isn't a final answer. A full answer says specifically what running the Smoothness Caution revealed that your first impression hadn't already told you.</p>
+      <textarea id="own_institution_final" data-required="true" aria-describedby="own_institution_final_error own_institution_final_rhint"></textarea>
       <p class="error-inline" id="own_institution_final_error">This still needs a response.</p>
     </section>
 
@@ -226,7 +242,8 @@
       <h2>What actually changed?</h2>
       <label for="revision_check">Prompt 10.1 — Compare your first reaction to your final answer</label>
       <p class="hint">Name one specific, concrete thing that changed. If nothing changed, say so honestly and explain why your first reaction already held up.</p>
-      <textarea id="revision_check" data-required="true" aria-describedby="revision_check_error"></textarea>
+      <p class="response-hint" id="revision_check_rhint"><strong>Watch for:</strong> writing "nothing changed" and stopping there. That's an allowed outcome, but only when you explain specifically why your first reaction survived applying the Smoothness Caution, not just assert that it did.</p>
+      <textarea id="revision_check" data-required="true" aria-describedby="revision_check_error revision_check_rhint"></textarea>
       <p class="error-inline" id="revision_check_error">This still needs a response.</p>
       <div class="checkline">
         <input type="checkbox" id="journalRef">
@@ -253,7 +270,7 @@
     </section>
   </main>
 </div>
-<footer>Chapter 9 Workbook v2.0 · Ethics and Critical Thinking · Local-only HTML, no data leaves this page.</footer>
+<footer>Chapter 9 Workbook v2.1 · Ethics and Critical Thinking · Local-only HTML, no data leaves this page.</footer>
 <script>
 (function() {
   'use strict';
@@ -345,7 +362,7 @@
   }
   function worksheetText() {
     return [
-      'Chapter 9 Workbook Worksheet v2.0 — How Culture Makes Us',
+      'Chapter 9 Workbook Worksheet v2.1 — How Culture Makes Us',
       '',
       'Case One: PE-acquired nursing homes provide 33 fewer minutes of daily care and show a measurable mortality increase.',
       'Case Two: A private correctional facility shows 43 percent staff turnover and under 1 percent of revenue to programming.',
